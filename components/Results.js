@@ -1,12 +1,13 @@
 import MovieCard from "./MovieCard";
 
-
-function Results({results}) {
-  return <div>
-      {results.map(movie => (
-        <MovieCard key={movie.id} movie={movie}/>
+function Results({ results }) {
+  return (
+    <div className="px-5 my-10 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center">
+      {results.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
       ))}
-  </div>;
+    </div>
+  );
 }
 
 export default Results;
