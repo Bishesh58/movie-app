@@ -2,7 +2,7 @@ import { ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import { forwardRef } from "react";
 
-
+// eslint-disable-next-line react/display-name
 const MovieCard = forwardRef(({ movie }, ref)=> {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   // console.log(movie)
@@ -19,6 +19,7 @@ const MovieCard = forwardRef(({ movie }, ref)=> {
         height={1080}
         width={1920}
         priority
+        alt="poster"
       />
       <div className="p-2">
         <p className="truncate max-w-md">{movie.overview}</p>
